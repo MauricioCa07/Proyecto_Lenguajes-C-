@@ -5,9 +5,9 @@
 #include <time.h>
 
 using namespace std;
-
 class Adicional {
 private:
+
   string pActual;
   LinkedList_Llp Llp;
   string palabras[10] = {"HUMANO", "PERSONA", "MUJER", "HOMBRE", "SOBRINA",
@@ -106,10 +106,10 @@ public:
     }else if(cont!=temp->get_Indice()+1 && p==6){  
        cout<<"\nNo adivino la palabra,la cual era:"<<endl;
       while (temp2!= NULL) {
-        cout<<temp2->get_Palabra();
+        cout<<rojo<<temp2->get_Palabra();
         temp2=temp2->get_Siguiente();
       }
-      cout<<", La siguiente sera la vencida"<<endl;
+      cout<<gris<<", La siguiente sera la vencida"<<endl;
       return true;
     }
     return false;
