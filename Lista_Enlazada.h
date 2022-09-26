@@ -1,5 +1,11 @@
 #include <iostream>
+#include "colormod.h"
 using namespace std;
+
+  Color::Modifier gris(Color::FG_DEFAULT);
+  Color::Modifier verde(Color::FG_GREEN);
+  Color::Modifier amarillo(Color::FG_LIGHT_YELLOW);
+  Color::Modifier rojo(Color::FG_RED);
 
 class Nodo{
     
@@ -47,7 +53,13 @@ class Nodo{
   }
 
   void mostar_Color(){
-    cout<<"La letra: "<<this->palabra <<" tiene el valor de: "<<this->color<<endl;
+    if(this->color=="Verde"){
+      cout<<verde<<this->palabra<<gris;
+    }else if(this->color=="Amarillo"){
+      cout<<amarillo<<this->palabra<<gris;
+    }else{
+      cout<<gris<<this->palabra<<gris;
+    }
   }
   
 };
